@@ -48,43 +48,14 @@ function Dashboard() {
       <Hero className="hero-container">
         <h1 className="m-5">Yoga Speakeasy</h1>
         <h2 className="m-2 p-3">Sign Up For Saturday Classes Now!</h2>
-        {/* <Form
-          handleChange={(e) => setLocation(e.target.value)}
-          onFormSubmit={handleFormSubmit}
-        />  */}
+     
         <Counter />
 
-          {/* <Button style={{background:'red', color:'black'}} disabled={loading} className="w-35" type="submit">
-              Sign Up 10 spots left!! */}
-            {/* </Button> */}
-            {/* <div>
-          <footer
-            className="footer"
-            style={{
-              fontFamily: "Texturina",
-              color: "red",
-              fontSize: "26px",
-            }}
-          >
-            Scroll Down For Results{" "}
-          </footer>
-        </div> */}
+          
+        
       </Hero>
     
-      {/* <Row>
-        <Col
-          style={{ fontFamily: 'Texturina' }}
-          className="mt-5"
-          size="md-6"
-        >
-           <p>Click on the heart to add the location to your favorites list!</p>
-          <ListGroup className="mt-5">
-            {dispensaries.map((dispensary) => (
-              <DispensaryCard favorite={favorite} {...dispensary} />
-            ))}
-          </ListGroup>
-        </Col>
-      </Row> */}
+      
     </div>
   );
 } 

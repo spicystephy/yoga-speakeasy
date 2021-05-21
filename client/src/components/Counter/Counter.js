@@ -25,7 +25,7 @@ class Counter extends React.Component {
   render() {
     return (
       <div className="card text-center">
-        <div className="card-header bg-primary text-white">
+        <div className="card-header bg-primary text-red">
           Sign Up For Classes!
         </div>
         <div className="card-body">
