@@ -52,7 +52,7 @@ export default function Login() {
           </div>
         </Card.Body>
       </Card>
-      <div className="w-100 text-center mt-2" style={{fontFamily:'Texturina'}}>
+      <div className="w-90 text-center mt-2" style={{fontFamily:'Texturina'}}>
         Need an account? <Link to="/signup">Sign Up</Link>
       </div>
     </>

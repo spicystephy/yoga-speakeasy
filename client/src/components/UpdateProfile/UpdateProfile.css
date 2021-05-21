@@ -28,3 +28,7 @@
 .text-center {
   margin-top: 250px;
 }
+
+.w-100 {
+  background-color: orangered;
+}
