@@ -16,10 +16,11 @@ function Dashboard() {
       // }}
     >
       <Navbar />
-      <Hero className="hero-container margin-20px">
+      <Hero className="hero-container">
+        <div>
         <h1 className="m-5 text-black">Yoga Speakeasy</h1>
-        <h2 className="m-2 p-3">Sign Up For Saturday Classes Now!</h2>
-
+        <h2 className="m-2 p-3">Sign Up For Saturday's 10AM Class Now!</h2>
+        </div>
         <Counter />
       </Hero>
     </div>
