@@ -28,8 +28,8 @@ class Counter extends React.Component {
     );
   }
 }
-const Button = (props) => <button {...props} />;
-const App = () => <Counter />;
-ReactDOM.render(<App />, document.getElementById('root'));
+// const Button = (props) => <button {...props} />;
+// const App = () => <Counter />;
+// ReactDOM.render(<App />, document.getElementById('root'));
 
 export default Counter;
