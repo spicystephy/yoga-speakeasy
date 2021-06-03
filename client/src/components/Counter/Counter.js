@@ -1,33 +1,42 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import "./Counter.css";
+import "../Counter/Counter.css";
+import useStateWithLocalStorage from "../useStateWithLocalStorage";
 
-class Counter extends React.Component {
-  state = {
-    count: 10,
-    disable: false,
+function Counter() {
+  const [count, setCount] = useStateWithLocalStorage(10, "count");
+
+  const addSpotHandler=()=>{
+    if(count === 0){
+      return;
+    }
+    setCount(count -1);
   };
 
-  handleDecrement = () => {
-    if (this.state.count > 0) this.setState({ count: this.state.count - 1 });
-    else this.setState({ disable: true })
+  const cancelSpotHandler=()=>{
+    if(count === 10){
+      return;
+    }
+    setCount(count +1);
   };
-  render() {
     return (
       <div className="card text-center">
         <div className="card-header bg-primary text-red">
           Sign Up For Classes!
         </div>
         <div className="card-body">
-          <p className="card-text"> Mats Left : {this.state.count}</p>
-          <Button className="btn btn-danger" onClick={this.handleDecrement}>
-            Spots
-          </Button>
+          <p className="card-text"> Mats Left : {count}</p>
+          <Button className="btn btn-danger" onClick={addSpotHandler}>
+          Save my Spot
+        </Button>
+      <Button className="btn btn-primary" onClick={cancelSpotHandler}>
+        Cancel my Spot
+      </Button>
         </div>
       </div>
     );
   }
-}
+
 // const Button = (props) => <button {...props} />;
 // const App = () => <Counter />;
 // ReactDOM.render(<App />, document.getElementById('root'));
