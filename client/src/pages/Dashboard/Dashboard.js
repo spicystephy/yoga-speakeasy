@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import Hero from "../../components/Hero";
 import Navbar from "../../components/Navbar";
 import Counter from "../../components/Counter/Counter";
-import { CalendarComponent } from "@syncfusion/ej2-react-calendars";
+// import { CalendarComponent } from "@syncfusion/ej2-react-calendars";
 import "./Dashboard.css"
 
 function Dashboard() {
   // const [loading, setLoading] = useState(false);
-  const dateValue =  new Date(
-    new Date().getFullYear(),
-    new Date().getMonth(),
-    20
-  );
+  // const dateValue =  new Date(
+  //   new Date().getFullYear(),
+  //   new Date().getMonth(),
+  //   20
+  // );
   return (
     <div>
       <Navbar />
@@ -21,7 +21,7 @@ function Dashboard() {
           <h2 className="m-2 p-3">Sign Up For Saturday's 10AM Class Now!</h2>
         </div>
         <Counter />
-        <CalendarComponent value={dateValue}></CalendarComponent>
+        {/* <CalendarComponent value={dateValue}></CalendarComponent> */}
       </Hero>
     </div>
   );
