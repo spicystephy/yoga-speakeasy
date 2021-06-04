@@ -4,7 +4,6 @@ import { useAuth } from "../contexts/AuthContext";
 import { useHistory } from "react-router-dom";
 // import celp from "../../src/assets/images/2.png"
 
-
 function Navbarfunction() {
   const { currentUser, logout } = useAuth();
   const [error, setError] = useState("");
@@ -17,7 +16,7 @@ function Navbarfunction() {
       await logout();
       history.push("/");
     } catch {
-      setError("Failed to log out");      
+      setError("Failed to log out");
     }
   }
 
@@ -28,8 +27,11 @@ function Navbarfunction() {
       variant="dark"
       className="d-flex justify-content-between"
     >
-      <Navbar.Brand style={{ color: "red", fontFamily:'Texturina', fontSize:'40px' }} href="#home">
-      {/* <img src={celp}
+      <Navbar.Brand
+        style={{ color: "red", fontFamily: "Texturina", fontSize: "40px" }}
+        href="#home"
+      >
+        {/* <img src={celp}
       width="200"
       height="200"
       alt="business logo"
@@ -40,22 +42,70 @@ function Navbarfunction() {
         id="basic-navbar-nav"
         className="d-flex justify-content-end"
         style={{ maxWidth: "fit-content" }}
-        color= "yellow"
+        color="yellow"
       >
         <Nav>
           {error && <Alert variant="danger"> {error} </Alert>}
-          <Nav.Link style={{ color: "red", fontFamily:'Texturina', fontSize:'20px' }} href="/">Home</Nav.Link>
+          <Nav.Link
+            style={{
+              color: "white",
+              fontFamily: "Texturina",
+              fontSize: "20px",
+            }}
+            href="/"
+          >
+            Home
+          </Nav.Link>
           {/* {currentUser && <Nav.Link style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'20px' }} href="/favorites">Favorites</Nav.Link>} */}
-          {currentUser && <Nav.Link style={{ color: "red", fontFamily:'Texturina', fontSize:'20px' }} href="/profile">Profile</Nav.Link>}
-          {!currentUser && <Nav.Link style={{ color: "red", fontFamily:'Texturina', fontSize:'20px' }} href="/signup">Create an Account</Nav.Link>}
+          {currentUser && (
+            <Nav.Link
+              style={{
+                color: "white",
+                fontFamily: "Texturina",
+                fontSize: "20px",
+              }}
+              href="/profile"
+            >
+              Profile
+            </Nav.Link>
+          )}
+          {!currentUser && (
+            <Nav.Link
+              style={{
+                color: "white",
+                fontFamily: "Texturina",
+                fontSize: "20px",
+              }}
+              href="/signup"
+            >
+              Create an Account
+            </Nav.Link>
+          )}
           {!currentUser ? (
-            <Nav.Link style={{ color: "red", fontFamily:'Texturina', fontSize:'20px' }} href="/login">Log In</Nav.Link>
+            <Nav.Link
+              style={{
+                color: "white",
+                fontFamily: "Texturina",
+                fontSize: "20px",
+              }}
+              href="/login"
+            >
+              Log In
+            </Nav.Link>
           ) : (
-            <Button style={{ color: "red", fontFamily:'Texturina', fontSize:'20px' }} variant="link" onClick={handleLogout}>
+            <Button
+              style={{
+                color: "white",
+                fontFamily: "Texturina",
+                fontSize: "20px",
+              }}
+              variant="link"
+              onClick={handleLogout}
+            >
               Log Out
             </Button>
           )}
-          </Nav>
+        </Nav>
       </Navbar.Collapse>
     </Navbar>
   );

@@ -21,15 +21,15 @@ function Counter() {
   };
     return (
       <div className="card text-center">
-        <div className="card-header bg-primary text-red">
+        <div className="card-header bg-info text-red">
           Sign Up For Classes!
         </div>
         <div className="card-body">
           <p className="card-text"> Mats Left : {count}</p>
-          <Button className="btn btn-danger" onClick={addSpotHandler}>
+          <Button className="btn btn-info" onClick={addSpotHandler}>
           Save my Spot
         </Button>
-      <Button className="btn btn-primary" onClick={cancelSpotHandler}>
+      <Button className="btn btn-secondary" onClick={cancelSpotHandler}>
         Cancel my Spot
       </Button>
         </div>

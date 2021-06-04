@@ -18,7 +18,7 @@ function Dashboard() {
       <Hero className="hero-container">
         <div>
           <h1 className="m-5">Yoga Speakeasy</h1>
-          <h2 className="m-2 p-3">Sign Up For Saturday's 10AM Class Now!</h2>
+          <h2 className="m-2 p-3" >Sign Up For Saturday's 10AM Class Now!</h2>
         </div>
         <Counter />
         {/* <CalendarComponent value={dateValue}></CalendarComponent> */}
