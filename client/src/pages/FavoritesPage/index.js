@@ -1,2 +1,2 @@
-export { default } from "./FavoritesPage";
+// export { default } from "./FavoritesPage";
 
